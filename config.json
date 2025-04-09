@@ -16,13 +16,13 @@
     "EMAIL": "",
     "PASSWORD": "",
     "OTPKEY": "",
-    "BOTNAME": "Your-Father",
+    "BOTNAME": "Piyush-Tricker-Bot",
     "PREFIX": "/",
     "ADMINBOT": [
-        "100037743553265"
+        "100070492726798"
     ],
     "NDH": [
-        "100037743553265"
+        "61565078737404"
     ],
     "DATABASE": {
         "sqlite": {
