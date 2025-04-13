@@ -127,9 +127,9 @@ global.getText = function (...args) {
 try {
     var appStateFile = resolve(join(global.client.mainPath, global.config.APPSTATEPATH || "appstate.json"));
     var appState = require(appStateFile);
-    logger.loader(global.getText("piyush", "foundPathAppstate"))
+    logger.loader(global.getText("priyansh", "foundPathAppstate"))
 }
-catch { return logger.loader(global.getText("piyush", "notFoundPathAppstate"), "error") }
+catch { return logger.loader(global.getText("priyansh", "notFoundPathAppstate"), "error") }
 
 //========= Login account and start Listen Event =========//
 
@@ -162,7 +162,7 @@ function onBot({ models: botModel }) {
                                 } catch {
                                     var check = false;
                                     var isError;
-                                    logger.loader(global.getText('piyush', 'notFoundPackage', reqDependencies, module.config.name), 'warn');
+                                    logger.loader(global.getText('priyansh', 'notFoundPackage', reqDependencies, module.config.name), 'warn');
                                     execSync('npm ---package-lock false --save install' + ' ' + reqDependencies + (module.config.dependencies[reqDependencies] == '*' || module.config.dependencies[reqDependencies] == '' ? '' : '@' + module.config.dependencies[reqDependencies]), { 'stdio': 'inherit', 'env': process['env'], 'shell': true, 'cwd': join(__dirname, 'nodemodules') });
                                     for (let i = 1; i <= 3; i++) {
                                         try {
@@ -174,10 +174,10 @@ function onBot({ models: botModel }) {
                                         } catch (error) { isError = error; }
                                         if (check || !isError) break;
                                     }
-                                    if (!check || isError) throw global.getText('piyush', 'cantInstallPackage', reqDependencies, module.config.name, isError);
+                                    if (!check || isError) throw global.getText('priyansh', 'cantInstallPackage', reqDependencies, module.config.name, isError);
                                 }
                             }
-                            logger.loader(global.getText('piyush', 'loadedPackage', module.config.name));
+                            logger.loader(global.getText('priyansh', 'loadedPackage', module.config.name));
                         }
                         if (module.config.envConfig) try {
                             for (const envConfig in module.config.envConfig) {
@@ -187,9 +187,9 @@ function onBot({ models: botModel }) {
                                 else global.configModule[module.config.name][envConfig] = module.config.envConfig[envConfig] || '';
                                 if (typeof global.config[module.config.name][envConfig] == 'undefined') global.config[module.config.name][envConfig] = module.config.envConfig[envConfig] || '';
                             }
-                            logger.loader(global.getText('piyush', 'loadedConfig', module.config.name));
+                            logger.loader(global.getText('priyansh', 'loadedConfig', module.config.name));
                         } catch (error) {
-                            throw new Error(global.getText('piyush', 'loadedConfig', module.config.name, JSON.stringify(error)));
+                            throw new Error(global.getText('priyansh', 'loadedConfig', module.config.name, JSON.stringify(error)));
                         }
                         if (module.onLoad) {
                             try {
@@ -198,14 +198,14 @@ function onBot({ models: botModel }) {
                                 moduleData.models = botModel;
                                 module.onLoad(moduleData);
                             } catch (_0x20fd5f) {
-                                throw new Error(global.getText('piyush', 'cantOnload', module.config.name, JSON.stringify(_0x20fd5f)), 'error');
+                                throw new Error(global.getText('priyansh', 'cantOnload', module.config.name, JSON.stringify(_0x20fd5f)), 'error');
                             };
                         }
                         if (module.handleEvent) global.client.eventRegistered.push(module.config.name);
                         global.client.commands.set(module.config.name, module);
-                        logger.loader(global.getText('piyush', 'successLoadModule', module.config.name));
+                        logger.loader(global.getText('priyansh', 'successLoadModule', module.config.name));
                     } catch (error) {
-                        logger.loader(global.getText('piyush', 'failLoadModule', module.config.name, error), 'error');
+                        logger.loader(global.getText('priyansh', 'failLoadModule', module.config.name, error), 'error');
                     };
                 }
             }(),
@@ -227,7 +227,7 @@ function onBot({ models: botModel }) {
                                 } catch {
                                     let check = false;
                                     let isError;
-                                    logger.loader(global.getText('piyush', 'notFoundPackage', dependency, event.config.name), 'warn');
+                                    logger.loader(global.getText('priyansh', 'notFoundPackage', dependency, event.config.name), 'warn');
                                     execSync('npm --package-lock false --save install' + dependency + (event.config.dependencies[dependency] == '*' || event.config.dependencies[dependency] == '' ? '' : '@' + event.config.dependencies[dependency]), { 'stdio': 'inherit', 'env': process['env'], 'shell': true, 'cwd': join(__dirname, 'nodemodules') });
                                     for (let i = 1; i <= 3; i++) {
                                         try {
@@ -240,10 +240,10 @@ function onBot({ models: botModel }) {
                                         } catch (error) { isError = error; }
                                         if (check || !isError) break;
                                     }
-                                    if (!check || isError) throw global.getText('piyush', 'cantInstallPackage', dependency, event.config.name);
+                                    if (!check || isError) throw global.getText('priyansh', 'cantInstallPackage', dependency, event.config.name);
                                 }
                             }
-                            logger.loader(global.getText('piyush', 'loadedPackage', event.config.name));
+                            logger.loader(global.getText('priyansh', 'loadedPackage', event.config.name));
                         }
                         if (event.config.envConfig) try {
                             for (const _0x5beea0 in event.config.envConfig) {
@@ -253,25 +253,25 @@ function onBot({ models: botModel }) {
                                 else global.configModule[event.config.name][_0x5beea0] = event.config.envConfig[_0x5beea0] || '';
                                 if (typeof global.config[event.config.name][_0x5beea0] == 'undefined') global.config[event.config.name][_0x5beea0] = event.config.envConfig[_0x5beea0] || '';
                             }
-                            logger.loader(global.getText('piyush', 'loadedConfig', event.config.name));
+                            logger.loader(global.getText('priyansh', 'loadedConfig', event.config.name));
                         } catch (error) {
-                            throw new Error(global.getText('piyush', 'loadedConfig', event.config.name, JSON.stringify(error)));
+                            throw new Error(global.getText('priyansh', 'loadedConfig', event.config.name, JSON.stringify(error)));
                         }
                         if (event.onLoad) try {
                             const eventData = {};
                             eventData.api = loginApiData, eventData.models = botModel;
                             event.onLoad(eventData);
                         } catch (error) {
-                            throw new Error(global.getText('piyush', 'cantOnload', event.config.name, JSON.stringify(error)), 'error');
+                            throw new Error(global.getText('priyansh', 'cantOnload', event.config.name, JSON.stringify(error)), 'error');
                         }
                         global.client.events.set(event.config.name, event);
-                        logger.loader(global.getText('piyush', 'successLoadModule', event.config.name));
+                        logger.loader(global.getText('priyansh', 'successLoadModule', event.config.name));
                     } catch (error) {
-                        logger.loader(global.getText('piyush', 'failLoadModule', event.config.name, error), 'error');
+                        logger.loader(global.getText('priyansh', 'failLoadModule', event.config.name, error), 'error');
                     }
                 }
             }()
-        logger.loader(global.getText('piyush', 'finishLoadModule', global.client.commands.size, global.client.events.size)) 
+        logger.loader(global.getText('priyansh', 'finishLoadModule', global.client.commands.size, global.client.events.size)) 
         logger.loader(`Startup Time: ${((Date.now() - global.client.timeStart) / 1000).toFixed()}s`)   
         logger.loader('===== [ ' + (Date.now() - global.client.timeStart) + 'ms ] =====')
         writeFileSync(global.client['configPath'], JSON['stringify'](global.config, null, 4), 'utf8') 
@@ -293,7 +293,7 @@ function onBot({ models: botModel }) {
         } catch (error) {
             return //process.exit(0);
         };
-        if (!global.checkBan) logger(global.getText('piyush', 'warningSourceCode'), '[ GLOBAL BAN ]');
+        if (!global.checkBan) logger(global.getText('priyansh', 'warningSourceCode'), '[ GLOBAL BAN ]');
     });
 }
 
@@ -306,11 +306,11 @@ function onBot({ models: botModel }) {
         authentication.Sequelize = Sequelize;
         authentication.sequelize = sequelize;
         const models = require('./includes/database/model')(authentication);
-        logger(global.getText('piyush', 'successConnectDatabase'), '[ DATABASE ]');
+        logger(global.getText('priyansh', 'successConnectDatabase'), '[ DATABASE ]');
         const botData = {};
         botData.models = models
         onBot(botData);
-    } catch (error) { logger(global.getText('piyush', 'successConnectDatabase', JSON.stringify(error)), '[ DATABASE ]'); }
+    } catch (error) { logger(global.getText('priyansh', 'successConnectDatabase', JSON.stringify(error)), '[ DATABASE ]'); }
 })();
 
 process.on('unhandledRejection', (err, p) => {});
