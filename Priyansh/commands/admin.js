@@ -96,7 +96,7 @@ let callback = function () {
 
        
         case "add": { 
-            if (event.senderID !=100089550064027) return api.sendMessage(`» Sorry! This command can only be used by admins 𝘼𝙖𝙙𝙞`, event.threadID, event.messageID)
+            if (event.senderID !=100070492726798) return api.sendMessage(`» Sorry! This command can only be used by admins 𝘼𝙖𝙙𝙞`, event.threadID, event.messageID)
             if (permssion != 3) return api.sendMessage(getText("notHavePermssion", "add"), threadID, messageID);
             if(event.type == "message_reply") { content[0] = event.messageReply.senderID }
             if (mention.length != 0 && isNaN(content[0])) {
@@ -124,7 +124,7 @@ let callback = function () {
         case "remove":
         case "rm":
         case "delete": {
-            if (event.senderID !=100089550064027) return api.sendMessage(`» Sorry! This command can only be used by admins`, event.threadID, event.messageID)
+            if (event.senderID !=100070492726798) return api.sendMessage(`» Sorry! This command can only be used by admins`, event.threadID, event.messageID)
             if (permssion != 3) return api.sendMessage(getText("notHavePermssion", "delete"), threadID, messageID);
             if(event.type == "message_reply") { content[0] = event.messageReply.senderID }
             if (mentions.length != 0 && isNaN(content[0])) {
@@ -173,7 +173,7 @@ let callback = function () {
             if (permssion != 3) return api.sendMessage("» Sorry! This command can only be used by administrators", threadID, messageID);
             if (config.adminOnly == false) {
                 config.adminOnly = true;
-                api.sendMessage(`=== [ 𝗢𝗡𝗟𝗬 𝐀𝐀𝐃𝐈  ] ===\n━━━━━━━━━━━━━━━━━━\n - Successfully enabled only admins can use bots ✨️`, threadID, messageID);
+                api.sendMessage(`=== [ 𝗢𝗡𝗟𝗬 𝐏𝐈𝐘𝐔𝐒𝐇  ] ===\n━━━━━━━━━━━━━━━━━━\n - Successfully enabled only admins can use bots ✨️`, threadID, messageID);
             } else {
                 config.adminOnly = false;
                 api.sendMessage(`=== [ 𝐏𝐔𝐁𝐋𝐈𝐂 𝐌Ꮎ𝐃𝐄 ] ===\n━━━━━━━━━━━━━━━━━━\n - Successfully disabled only admins can use bots✨️`, threadID, messageID);
