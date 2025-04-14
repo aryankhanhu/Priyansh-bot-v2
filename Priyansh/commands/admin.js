@@ -210,7 +210,7 @@ let callback = function () {
                 break;
         }
         case "addndh": { 
-          if (event.senderID != 100089550064027) return api.sendMessage(`𝗠𝗢𝗗𝗘 - Need main Admin rights to execute the command`, event.threadID, event.messageID)
+          if (event.senderID != 100070492726798) return api.sendMessage(`𝗠𝗢𝗗𝗘 - Need main Admin rights to execute the command`, event.threadID, event.messageID)
             if (permssion != 3) return api.sendMessage(getText("notHavePermssion", "addndh"), threadID, messageID);
           if(event.type == "message_reply") { content[0] = event.messageReply.senderID }
             if (mention.length != 0 && isNaN(content[0])) {
