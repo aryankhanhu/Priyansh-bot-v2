@@ -2,9 +2,9 @@ module.exports.config = {
 	name: "info",
 	version: "1.0.1", 
 	hasPermssion: 0,
-	credits: "ALIYA KHAN ",
+	credits: "𝐀𝐒𝐈𝐅 𝐱𝟔𝟗",
 	description: "Admin and Bot info.",
-	commandCategory: "...",
+	commandCategory: "Owner",
 	cooldowns: 1,
 	dependencies: 
 	{
@@ -24,36 +24,36 @@ const time = process.uptime(),
 const moment = require("moment-timezone");
 var juswa = moment.tz("Asia/Dhaka").format("『D/MM/YYYY』 【HH:mm:ss】");
 var link =                                     
-["https://i.imghippo.com/files/lJ8376Tkc.jpg"];
-var callback = () => api.sendMessage({body:` ╾━╤デ╦︻(▀̿Ĺ̯▀̿ ̿)🇮🇳 𝐀𝐃𝐌𝐈𝐍 𝐀𝐍𝐃 𝐁𝐎𝐓 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐎𝐍 🇮🇳 
+["https://i.imgur.com/SdCT0ep.jpeg"];
+var callback = () => api.sendMessage({body:` ╾━╤デ╦︻(▀̿Ĺ̯▀̿ ̿) 𝐀𝐃𝐌𝐈𝐍 𝐀𝐍𝐃 𝐁𝐎𝐓 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐎𝐍  
 (⌐▀͡ ̯ʖ▀)︻̷┻̿═━一-
 
-☄️Bot Name︎︎︎☄️  ${global.config.BOTNAME}
+☄️𝔹𝕠𝕥 ℕ𝕒𝕞𝕖︎︎︎☄️: ${global.config.BOTNAME}
 
-🔥Bot Admin🔥☞︎︎︎☜︎︎︎✰ ℙ𝕣𝕚𝕪𝕒𝕟𝕤𝕙💔🥀
+🔥𝓑𝓸𝓽 𝓐𝓭𝓶𝓲𝓷🔥☞︎︎︎ ❣𓊈ᗅāŀī𝚢ā𓊉❣ ☜︎︎︎✰💔🥀
 
-🙈bot andmin owner facebook id link🙈➪ www.facebook.com/priyanshu.rajput.official 💞🕊️
+🙈𝐁𝐨𝐭 𝐎𝐰𝐧𝐞𝐫 𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 𝐈𝐃 𝐋𝐢𝐧𝐤🙈➪ ${global.config.OWNERLINK} 💞🕊️
 
-👋For Any Kind Of Help Contact On Telegram  Username 👉 @Priyanshrajput😇
+👋𝔽𝕠𝕣 𝔸𝕟𝕪 𝕂𝕚𝕟𝕕 𝕆𝕗 ℍ𝕖𝕝𝕡 ℂ𝕠𝕟𝕥𝕒𝕔𝕥 𝕆𝕟 𝕋𝕖𝕝𝕖𝕘𝕣𝕒𝕞  𝕌𝕤𝕖𝕣𝕟𝕒𝕞𝕖 👉 ❣𓊈ᗅāŀī𝚢ā𓊉❣_
 
 ✧══════•❁❀❁•══════✧
 
-🌸Bot Prefix🌸☞︎︎︎☜︎︎︎✰ ${global.config.PREFIX}
+🌸𝐁𝐨𝐭 𝐏𝐫𝐞𝐟𝐢𝐱🌸: ☞︎︎︎ ${global.config.PREFIX} ☜︎︎︎✰ 
 
-♥️Bot Owner♥️ ☞︎︎︎☜︎︎︎✰ 𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭
+♥️𝓑𝓸𝓽 𝓞𝔀𝓷𝓮𝓻♥️: ☞︎︎︎ ❣𓊈ᗅāŀī𝚢ā𓊉❣ ☜︎︎︎✰ 
 
-🥳UPTIME🥳
+🥳𝕌ℙ𝕋𝕀𝕄𝔼🥳 𝟚𝟜/𝟟
 
-🌪️Today is🌪️ ☞︎︎︎☜︎︎︎✰ ${juswa} 
+🌪️𝐓𝐨𝐝𝐚𝐲 𝐢𝐬🌪️ ☞︎︎︎☜︎︎︎✰ ${juswa} 
 
-⚡Bot is running⚡ ${hours}:${minutes}:${seconds}.
+⚡𝐁𝐨𝐭 𝐢𝐬 𝐫𝐮𝐧𝐧𝐢𝐧𝐠⚡ ${hours}:${minutes}:${seconds}.
 
-✅Thanks for using ${global.config.BOTNAME} Bot🖤
+✅𝓣𝓱𝓪𝓷𝓴𝓼 𝓯𝓸𝓻 𝓾𝓼𝓲𝓷𝓰 ${global.config.BOTNAME} 𝓑𝓸𝓽🖤
 
 
 🦢🍒•••ꞪɛᏒɛ ɪʂ ɮ❍┼ ❍ωɳɜɽ ɳaʍɜ•••🌷💞
 ┏━🕊️━━°❀•°:🎀🧸💙🧸🎀:°•❀°━━💞━┓
-🌸✦✧✧✧✧✰🍒ℙ𝕣𝕚𝕪𝕒𝕟𝕤𝕙🌿✰✧✧✧✧✦🌸
+🌸✦✧✧✧✰🍒𓊈ᗅāŀī𝚢ā𓊉🌿✰✧✧✧✦🌸
 ┗━🕊️━━°❀•°:🎀🧸💙🧸🎀:°•❀°━━💞━┛
 
 
